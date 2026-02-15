@@ -1,7 +1,8 @@
 {
   "version": 2,
-  "buildCommand": "cd Frontend && npm install && npm run build && cd ../Backend && npm install",
-  "installCommand": "npm install",
+  "buildCommand": "cd Frontend && npm install && npm run build && mkdir -p ../Backend/public && cp -r dist/* ../Backend/public/",
+  "outputDirectory": "Backend/public",
+  "installCommand": "cd Backend && npm install",
   "framework": null,
   "rewrites": [
     { "source": "/api/(.*)", "destination": "/api" },
