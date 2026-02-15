@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "buildCommand": "cd Frontend && npm install && npm run build && cd ../Backend && npm install",
+  "installCommand": "npm install",
+  "framework": null,
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api" },
+    { "source": "/(.*)", "destination": "/api" }
+  ],
+  "functions": {
+    "api/index.js": {
+      "memory": 1024,
+      "maxDuration": 30
+    }
+  }
+}
